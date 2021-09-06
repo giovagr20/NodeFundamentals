@@ -1,0 +1,24 @@
+{
+  "name": "nodefundamentos",
+  "version": "1.0.0",
+  "description": "Fundamentos de nodejs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/giovagr20/NodeFundamentals.git"
+  },
+  "author": "Giovanni GR",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/giovagr20/NodeFundamentals/issues"
+  },
+  "homepage": "https://github.com/giovagr20/NodeFundamentals#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "nodemon": "^2.0.12"
+  }
+}
