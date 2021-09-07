@@ -7,6 +7,8 @@ const app = express();
 const router = express.Router();
 
 const routerLogin = require('./routes/routes');
+
+const morgan = require("morgan");
 //middleware
 
 app.use(express.json());
@@ -19,7 +21,14 @@ router.get('/', (req, res)=>{
     });
 });
 
+app.all("/access", (req, res, next) => {
+    res.json({
+        message: "He pasado por aquí"
+    });
+    next();
+})
 
+app.use(morgan("tiny"))
 app.use(router);
 app.use(routerLogin);
 
