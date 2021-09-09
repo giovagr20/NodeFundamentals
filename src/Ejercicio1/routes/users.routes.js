@@ -52,7 +52,7 @@ router.delete('/user/', (req, res) => {
     if(!user) {
         res.json({response: "User not found"});
     } else {
-        users = users.slice(findPosition, 1);
+        var users = users.slice(findPosition, 1);
         res.json({response: "User deleted"});
 
         console.log(users);
