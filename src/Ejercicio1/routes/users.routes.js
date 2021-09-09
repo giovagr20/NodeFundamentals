@@ -30,12 +30,16 @@ router.post('/user/', (req, res) => {
         || user.Cargo === undefined) {
             res.json({ "Usuario no fue agregado, no cumple el formato":user });
         }
-    else res.json({"Usuario agregado": user });
+    else {
+        users.push(user);
+        res.json({"Usuario agregado": user });
+        console.log(users);
+    }
     
 });
 
 
-router.delete('/delete/', (req, res) => {
+router.delete('/user/', (req, res) => {
     const id = req.body.id;
     if(id === null) { 
         res.json({
@@ -48,8 +52,10 @@ router.delete('/delete/', (req, res) => {
     if(!user) {
         res.json({response: "User not found"});
     } else {
-        users.slice(0, findPosition-1);
+        users = users.slice(findPosition, 1);
         res.json({response: "User deleted"});
+
+        console.log(users);
     }
 });
 

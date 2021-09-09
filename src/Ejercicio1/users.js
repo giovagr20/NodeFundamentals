@@ -1,4 +1,4 @@
-const users = 
+var users = 
 [{"id":1,"Name": "Andres", "Apellido":"Agudelo","Age":22,"Cargo":"Develop IT" },
 {"id":2,"Name": "Alex", "Apellido":"Rosario","Age":25,"Cargo":"Pintor"}, 
 {"id":3,"Name": "Martin", "Apellido":"Gomez","Age":27,"Cargo":"Publicista"}, 
